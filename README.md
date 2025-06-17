@@ -1,3 +1,5 @@
-# node_modules is also required for the project to work. 
+# INSTALL Node.js
+
+node_modules is a folder required in the parent folder of the project (Ecosystem_vX.X/) for the project to work. 
 
 Good luck, you got this!
