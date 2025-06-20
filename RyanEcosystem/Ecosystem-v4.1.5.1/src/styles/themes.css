@@ -1,0 +1,339 @@
+/* FILE: src/styles/themes.css */
+/* Color schemes and theming */
+
+/* Dark Theme (Default) */
+.theme-dark {
+  --bg-app: #0f0f0f;
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2a2a2a;
+  --bg-tertiary: #333;
+  --bg-hover: #444;
+  --border-color: #333;
+  --border-hover: #444;
+  --border-focus: #555;
+  
+  --text-primary: #fff;
+  --text-secondary: #e0e0e0;
+  --text-muted: #888;
+  --text-accent: #4CAF50;
+  
+  --accent-color: #4CAF50;
+  --accent-hover: #45a049;
+  --accent-dark: #388e3c;
+  
+  --danger-color: #f44336;
+  --warning-color: #ff9800;
+  --info-color: #2196F3;
+  --success-color: #4CAF50;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.5);
+  
+  /* Gradients */
+  --gradient-avatar: linear-gradient(45deg, #4CAF50, #2196F3);
+  --gradient-danger: linear-gradient(45deg, #f44336, #d32f2f);
+  
+  /* Union type specific colors */
+  --union-tenant-bg: rgba(76, 175, 80, 0.2);
+  --union-tenant-color: #4CAF50;
+  --union-labor-bg: rgba(33, 150, 243, 0.2);
+  --union-labor-color: #2196F3;
+  --union-cooperative-bg: rgba(255, 152, 0, 0.2);
+  --union-cooperative-color: #ff9800;
+  --union-general-bg: rgba(156, 39, 176, 0.2);
+  --union-general-color: #9c27b0;
+}
+
+/* Apply theme classes to body */
+body {
+  background: var(--bg-app, #0f0f0f);
+  color: var(--text-secondary, #e0e0e0);
+}
+
+/* Theme-aware component styles */
+.sidebar {
+  background: var(--bg-primary);
+  border-right-color: var(--border-color);
+}
+
+.topbar {
+  background: var(--bg-primary);
+  border-bottom-color: var(--border-color);
+}
+
+.content-area {
+  background: var(--bg-app);
+}
+
+.dashboard-card,
+.proposal-card,
+.issue-card,
+.member-item,
+.message-item {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+.dashboard-card:hover,
+.proposal-card:hover,
+.issue-card:hover,
+.member-item:hover,
+.message-item:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.btn {
+  background: var(--bg-secondary);
+  border-color: var(--border-hover);
+  color: var(--text-secondary);
+}
+
+.btn:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--border-focus);
+}
+
+.btn.primary {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.btn.primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.btn.danger {
+  background: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.form-input,
+.form-select {
+  background: var(--bg-secondary);
+  border-color: var(--border-hover);
+  color: var(--text-secondary);
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+}
+
+.modal-content {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-xl);
+}
+
+.modal-header {
+  background: var(--bg-secondary);
+  border-bottom-color: var(--border-color);
+}
+
+.nav-tab:hover:not(.active) {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+.nav-tab.active {
+  background: var(--bg-tertiary) !important;
+  border-right-color: var(--accent-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.org-avatar,
+.member-avatar {
+  background: var(--gradient-avatar);
+}
+
+.union-card {
+  border-color: var(--border-color);
+}
+
+.union-card:hover {
+  border-color: var(--accent-color) !important;
+  box-shadow: var(--shadow-lg);
+}
+
+.create-union-card:hover {
+  border-color: var(--accent-color) !important;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Status color mappings */
+.status-active {
+  background: var(--success-color);
+}
+
+.status-pending {
+  background: var(--warning-color);
+}
+
+.status-passed {
+  background: var(--info-color);
+}
+
+.status-failed {
+  background: var(--danger-color);
+}
+
+.priority-high {
+  background: var(--danger-color);
+}
+
+.priority-medium {
+  background: var(--warning-color);
+}
+
+.priority-low {
+  background: var(--success-color);
+}
+
+/* Union type badge color mappings */
+.union-type-badge.tenant-union {
+  background: var(--union-tenant-bg);
+  color: var(--union-tenant-color);
+}
+
+.union-type-badge.labor-union {
+  background: var(--union-labor-bg);
+  color: var(--union-labor-color);
+}
+
+.union-type-badge.cooperative {
+  background: var(--union-cooperative-bg);
+  color: var(--union-cooperative-color);
+}
+
+.union-type-badge.general {
+  background: var(--union-general-bg);
+  color: var(--union-general-color);
+}
+
+/* Notification color mappings */
+.notification.success {
+  background: var(--success-color);
+  border-left-color: var(--accent-dark);
+}
+
+.notification.error {
+  background: var(--danger-color);
+  border-left-color: var(--danger-hover);
+}
+
+.notification.warning {
+  background: var(--warning-color);
+  border-left-color: #f57c00;
+}
+
+.notification.info {
+  background: var(--info-color);
+  border-left-color: #1976d2;
+}
+
+/* Danger zone theming */
+.danger-zone .card-title {
+  color: var(--danger-color);
+}
+
+.danger-zone .dashboard-card {
+  border-color: var(--danger-color);
+  box-shadow: 0 2px 8px rgba(244, 67, 54, 0.2);
+}
+
+.danger-zone .dashboard-card:hover {
+  border-color: var(--danger-hover);
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}
+
+/* Loading spinner theming */
+.loading-spinner {
+  border-color: var(--bg-tertiary);
+  border-top-color: var(--accent-color);
+}
+
+.spinner {
+  border-color: var(--bg-tertiary);
+  border-top-color: var(--accent-color);
+}
+
+/* Status dot theming */
+.status-dot.connected {
+  background: var(--success-color);
+}
+
+.status-dot.disconnected {
+  background: var(--danger-color);
+}
+
+/* Text color helpers */
+.text-primary {
+  color: var(--text-primary) !important;
+}
+
+.text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.text-success {
+  color: var(--success-color) !important;
+}
+
+.text-danger {
+  color: var(--danger-color) !important;
+}
+
+.text-warning {
+  color: var(--warning-color) !important;
+}
+
+.text-info {
+  color: var(--info-color) !important;
+}
+
+/* Future: Light theme preparation */
+.theme-light {
+  --bg-app: #ffffff;
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #e0e0e0;
+  --bg-tertiary: #d0d0d0;
+  --bg-hover: #c0c0c0;
+  --border-color: #e0e0e0;
+  --border-hover: #d0d0d0;
+  --border-focus: #c0c0c0;
+  
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-muted: #666666;
+  --text-accent: #2e7d32;
+  
+  --accent-color: #4CAF50;
+  --accent-hover: #45a049;
+  --accent-dark: #2e7d32;
+  
+  --danger-color: #f44336;
+  --danger-hover: #d32f2f;
+  --warning-color: #ff9800;
+  --info-color: #2196F3;
+  --success-color: #4CAF50;
+  
+  /* Shadows for light theme */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.25);
+}

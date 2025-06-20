@@ -1,0 +1,782 @@
+/* FILE: src/styles/components.css */
+/* Component-specific styles */
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: #e0e0e0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn:hover {
+  background: #333;
+  border-color: #555;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Button Variants */
+.btn.primary {
+  background: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #66bb6a;
+  border-color: #66bb6a;
+}
+
+.btn.secondary {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.btn.danger {
+  background: #f44336;
+  border-color: #f44336;
+  color: white;
+}
+
+.btn.danger:hover {
+  background: #f66659;
+  border-color: #f66659;
+}
+
+/* Button Sizes */
+.btn.small {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.btn.large {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+/* Cards */
+.dashboard-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+.dashboard-card:hover {
+  border-color: #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.card-content {
+  color: #e0e0e0;
+}
+
+.card-value {
+  font-size: 28px;
+  font-weight: bold;
+  color: #4CAF50;
+  margin: 10px 0;
+}
+
+.card-meta {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* Proposal Cards */
+.proposal-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+
+.proposal-card:hover {
+  border-color: #444;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.proposal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.proposal-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.proposal-meta {
+  font-size: 12px;
+  color: #888;
+}
+
+.vote-summary {
+  font-size: 14px;
+  color: #ccc;
+  margin: 15px 0;
+}
+
+.vote-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.vote-buttons .btn {
+  flex: 1;
+}
+
+/* Issue Cards */
+.issue-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+
+.issue-card:hover {
+  border-color: #444;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.issue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.issue-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.issue-meta {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Member Items */
+.member-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 15px;
+  transition: all 0.2s ease;
+}
+
+.member-item:hover {
+  border-color: #444;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.member-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.member-details h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.member-role {
+  font-size: 12px;
+  color: #888;
+}
+
+.member-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Message Items */
+.message-item {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 15px;
+  transition: all 0.2s ease;
+}
+
+.message-item:hover {
+  border-color: #444;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.message-author {
+  font-weight: 600;
+  color: #4CAF50;
+}
+
+.message-time {
+  font-size: 12px;
+  color: #888;
+}
+
+.message-content {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Avatars */
+.org-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, #4CAF50, #2196F3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+}
+
+.member-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, #4CAF50, #2196F3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+}
+
+/* Status Indicators */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f44336;
+  flex-shrink: 0;
+}
+
+.status-dot.connected {
+  background: #4CAF50 !important;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+}
+
+.status-dot.disconnected {
+  background: #f44336;
+}
+
+/* Status Badges */
+.proposal-status,
+.issue-priority {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  flex-shrink: 0;
+}
+
+/* Proposal Status Variants */
+.status-active {
+  background: #4CAF50;
+  color: white;
+}
+
+.status-pending {
+  background: #ff9800;
+  color: white;
+}
+
+.status-passed {
+  background: #2196F3;
+  color: white;
+}
+
+.status-failed {
+  background: #f44336;
+  color: white;
+}
+
+/* Issue Priority Variants */
+.priority-high {
+  background: #f44336;
+  color: white;
+}
+
+.priority-medium {
+  background: #ff9800;
+  color: white;
+}
+
+.priority-low {
+  background: #4CAF50;
+  color: white;
+}
+
+/* Union Type Badges */
+.union-type-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.union-type-badge.tenant-union {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+}
+
+.union-type-badge.labor-union {
+  background: rgba(33, 150, 243, 0.2);
+  color: #2196F3;
+}
+
+.union-type-badge.cooperative {
+  background: rgba(255, 152, 0, 0.2);
+  color: #ff9800;
+}
+
+.union-type-badge.general {
+  background: rgba(156, 39, 176, 0.2);
+  color: #9c27b0;
+}
+
+/* Loading Spinners */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #333;
+  border-top: 4px solid #4CAF50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  border-top: 2px solid #4CAF50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+/* Back Button */
+.back-to-homepage {
+  background: none;
+  border: none;
+  color: #4CAF50;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 2px 0;
+  margin-top: 4px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back-to-homepage:hover {
+  color: #45a049;
+  text-decoration: underline;
+}
+
+/* Close Button */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #fff;
+  background: #333;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: #e0e0e0;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+}
+
+.form-input::placeholder {
+  color: #888;
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.form-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: #e0e0e0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+}
+
+/* Modals */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 0;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content.small {
+  max-width: 400px;
+}
+
+.modal-content.large {
+  max-width: 700px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #333;
+  background: #222;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  max-height: calc(90vh - 80px);
+}
+
+/* Notifications */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #333;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: translateX(400px);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  max-width: 350px;
+  word-wrap: break-word;
+}
+
+.notification.show {
+  transform: translateX(0);
+}
+
+.notification.success {
+  background: #4CAF50;
+  border-left: 4px solid #45a049;
+}
+
+.notification.error {
+  background: #f44336;
+  border-left: 4px solid #d32f2f;
+}
+
+.notification.warning {
+  background: #ff9800;
+  border-left: 4px solid #f57c00;
+}
+
+.notification.info {
+  background: #2196F3;
+  border-left: 4px solid #1976d2;
+}
+
+/* Homepage Specific Components */
+.union-card {
+  transition: all 0.2s ease;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.union-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: #4CAF50 !important;
+}
+
+.union-card:focus {
+  outline: none;
+}
+
+.union-card .dashboard-card {
+  border: none;
+  margin-bottom: 0;
+}
+
+.create-union-card {
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+.create-union-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: #4CAF50 !important;
+}
+
+.create-union-card:focus {
+  outline: none;
+}
+
+.create-union-card .dashboard-card {
+  background: transparent !important;
+  border: none;
+  margin-bottom: 0;
+  box-shadow: none !important;
+}
+
+/* Danger Zone Styles */
+.danger-zone {
+  margin-top: 40px;
+}
+
+.danger-zone .card-title {
+  color: #f44336;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.danger-zone .card-title::before {
+  content: "⚠️";
+  font-size: 18px;
+}
+
+.danger-zone .dashboard-card {
+  border-color: #f44336;
+  box-shadow: 0 2px 8px rgba(244, 67, 54, 0.2);
+}
+
+.danger-zone .dashboard-card:hover {
+  border-color: #d32f2f;
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}
+
+/* Delete confirmation modal styling */
+.modal .btn.danger:disabled {
+  background: #666;
+  border-color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Responsive Component Adjustments */
+@media (max-width: 768px) {
+  .proposal-header,
+  .issue-header,
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .vote-buttons {
+    flex-direction: column;
+  }
+
+  .member-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .member-actions {
+    align-self: flex-end;
+  }
+
+  .modal-content {
+    width: 95%;
+    margin: 10px;
+  }
+
+  .union-card {
+    padding: 15px !important;
+  }
+  
+  .union-card h3 {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .card-value {
+    font-size: 24px;
+  }
+
+  .proposal-title {
+    font-size: 16px;
+  }
+}
+
+/* Print Styles for Components */
+@media print {
+  .dashboard-card,
+  .proposal-card,
+  .issue-card,
+  .union-card {
+    border: 1px solid #000 !important;
+    background: white !important;
+    color: black !important;
+    break-inside: avoid;
+    margin-bottom: 20px;
+  }
+}
